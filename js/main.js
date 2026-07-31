@@ -192,8 +192,8 @@ function setupAnatomy(frames) {
   const labels = gsap.utils.toArray('.anatomy__label');
   const HOLD_START = 0.42, HOLD_END = 0.58; // parts hang suspended here
 
-  // Source video plays exploded → assembled, so explosion amount t
-  // maps to frames in reverse: t=0 shows the final (assembled) frame.
+  // Source video plays assembled → exploded, so explosion amount t
+  // maps to frames directly: t=0 shows the first (assembled) frame.
   // ZOOM crops source padding when needed; 1 = draw full frame.
   const ZOOM = 1;
   const draw = (index) => {
@@ -205,7 +205,7 @@ function setupAnatomy(frames) {
       ctx.drawImage(img, sx, sy, sw, sh, 0, 0, canvas.width, canvas.height);
     }
   };
-  const drawAtExplosion = (t) => draw(Math.round((1 - t) * (ANATOMY_FRAME_COUNT - 1)));
+  const drawAtExplosion = (t) => draw(Math.round(t * (ANATOMY_FRAME_COUNT - 1)));
   drawAtExplosion(0);
 
   ScrollTrigger.create({

@@ -249,14 +249,14 @@ img { max-width: 100%; display: block; }
 }
 .anatomy__stage {
   position: relative;
-  height: min(88vh, 880px); aspect-ratio: 1;
+  width: min(94vw, 1240px, calc(82vh * 1.334)); aspect-ratio: 1660 / 1244;
   display: flex; align-items: center; justify-content: center;
 }
 .anatomy__stage canvas {
   width: 100%; height: 100%;
-  mix-blend-mode: multiply; /* melts the video's bone bg into the page */
-  -webkit-mask-image: radial-gradient(ellipse 75% 75% at center, #000 62%, transparent 94%);
-  mask-image: radial-gradient(ellipse 75% 75% at center, #000 62%, transparent 94%);
+  mix-blend-mode: multiply; /* melts the video's white bg into the page */
+  -webkit-mask-image: radial-gradient(ellipse 82% 72% at center, #000 64%, transparent 96%);
+  mask-image: radial-gradient(ellipse 82% 72% at center, #000 64%, transparent 96%);
 }
 .anatomy__label {
   font-family: var(--font-mono);
@@ -267,10 +267,10 @@ img { max-width: 100%; display: block; }
 .anatomy__label span {
   width: 34px; height: 1px; background: var(--copper); display: block;
 }
-.anatomy__label--band    { top: 8%;  right: -10%; }
-.anatomy__label--hinge   { top: 34%; left: -12%; flex-direction: row-reverse; }
-.anatomy__label--driver  { top: 58%; right: -9%; }
-.anatomy__label--cushion { top: 80%; left: -11%; flex-direction: row-reverse; }
+.anatomy__label--band    { top: 10%; left: 12%; flex-direction: row-reverse; }
+.anatomy__label--hinge   { top: 28%; right: 18%; }
+.anatomy__label--driver  { top: 92%; left: 48%; flex-direction: row-reverse; }
+.anatomy__label--cushion { top: 88%; left: 22%; flex-direction: row-reverse; }
 
 /* ----------------------------------------------------------------
    05 · Silence (ANC dark interlude)
@@ -580,10 +580,10 @@ img { max-width: 100%; display: block; }
   .rotate__callout--2 { top: 8%; right: 20px; }
   .rotate__callout--3 { bottom: 14%; right: 20px; }
   .rotate__callout--4 { bottom: 14%; left: 20px; }
-  .anatomy__label--band    { top: 6%;  right: calc(50% - 50vw + 16px); }
-  .anatomy__label--hinge   { top: 30%; left: calc(50% - 50vw + 16px); }
-  .anatomy__label--driver  { top: 56%; right: calc(50% - 50vw + 16px); }
-  .anatomy__label--cushion { top: 84%; left: calc(50% - 50vw + 16px); }
+  .anatomy__label--band    { top: -26%; left: auto; right: calc(50% - 50vw + 16px); flex-direction: row; }
+  .anatomy__label--hinge   { top: -12%; left: calc(50% - 50vw + 16px); right: auto; flex-direction: row-reverse; }
+  .anatomy__label--driver  { top: 106%; left: auto; right: calc(50% - 50vw + 16px); flex-direction: row; }
+  .anatomy__label--cushion { top: 120%; left: calc(50% - 50vw + 16px); right: auto; flex-direction: row-reverse; }
   .appsec__inner { grid-template-columns: 1fr; }
   .power__inner { grid-template-columns: 1fr; justify-items: center; text-align: center; }
   .power__copy > p { margin-inline: auto; }
