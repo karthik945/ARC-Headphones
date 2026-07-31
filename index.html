@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ARC One — Sound, Shaped.</title>
+  <meta name="description" content="ARC One. Premium wireless headphones with adaptive noise cancellation. A UX/UI case study.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@500,700,800&f[]=switzer@400,500,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fragment+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Loader -->
+  <div class="loader" id="loader">
+    <span class="loader__mark">ARC</span>
+    <span class="loader__bar"><span class="loader__fill" id="loaderFill"></span></span>
+  </div>
+
+  <!-- Nav -->
+  <nav class="nav" id="nav">
+    <span class="nav__logo">ARC</span>
+    <div class="nav__links">
+      <a href="#design">Design</a>
+      <a href="#silence">Silence</a>
+      <a href="#anatomy">Anatomy</a>
+      <a href="#power">Power</a>
+      <a href="#specs">Specs</a>
+    </div>
+    <a class="nav__cta" href="#preorder">Pre-order</a>
+  </nav>
+
+  <main id="main">
+
+    <!-- 01 · HERO -->
+    <section class="hero" id="hero">
+      <div class="hero__stage">
+        <h1 class="hero__title" aria-label="Sound, Shaped.">
+          <span class="hero__word hero__word--l">Sound,</span>
+          <span class="hero__word hero__word--r">Shaped.</span>
+        </h1>
+        <div class="hero__product">
+          <img src="assets/images/arc_v1_cutout.png" alt="ARC One wireless headphones" class="hero__img" id="heroImg">
+        </div>
+        <p class="hero__sub">ARC One. Forty hours of adaptive silence.</p>
+      </div>
+      <div class="hero__scrollcue">
+        <span class="hero__scrollcue-line"></span>
+        <span>Scroll</span>
+      </div>
+    </section>
+
+    <!-- 02 · MANIFESTO -->
+    <section class="manifesto" id="design">
+      <p class="manifesto__text">
+        <span class="mline">We removed everything</span>
+        <span class="mline">that stood between</span>
+        <span class="mline">you and the music.</span>
+        <span class="mline mline--em">What remained, we made beautiful.</span>
+      </p>
+    </section>
+
+    <!-- 03 · 360 ROTATION (pinned, scroll-scrubbed) -->
+    <section class="rotate" id="rotate">
+      <div class="rotate__pin" id="rotatePin">
+        <div class="rotate__viewer" id="rotateViewer">
+          <canvas id="rotateCanvas" width="1440" height="1440" aria-label="ARC One rotating product view" role="img"></canvas>
+        </div>
+        <div class="rotate__callout rotate__callout--1" data-progress="0.12">
+          <span class="rotate__callout-dot"></span>
+          <span class="rotate__callout-eyebrow">Acoustics</span>
+          <p><strong>40 mm free-edge driver</strong><br>Copper-clad voice coil behind each cup face, tuned flat from 4 Hz to 40 kHz.</p>
+          <span class="rotate__callout-spec">THD &lt; 0.03% @ 94 dB</span>
+        </div>
+        <div class="rotate__callout rotate__callout--2" data-progress="0.38">
+          <span class="rotate__callout-dot"></span>
+          <span class="rotate__callout-eyebrow">Enclosure</span>
+          <p><strong>Single-billet aluminum cups</strong><br>CNC-milled shell with a machined copper ring; 6 ANC microphones sit hidden in the rim.</p>
+          <span class="rotate__callout-spec">–38 dB passive isolation</span>
+        </div>
+        <div class="rotate__callout rotate__callout--3" data-progress="0.64">
+          <span class="rotate__callout-dot"></span>
+          <span class="rotate__callout-eyebrow">Control</span>
+          <p><strong>Copper roller dial</strong><br>Volume in 0.5 dB steps; press once to jump between ANC and Transparency.</p>
+          <span class="rotate__callout-spec">40 h · USB-C lossless</span>
+        </div>
+        <div class="rotate__callout rotate__callout--4" data-progress="0.88">
+          <span class="rotate__callout-dot"></span>
+          <span class="rotate__callout-eyebrow">Fit</span>
+          <p><strong>Stitched leather canopy</strong><br>Spreads the 312 g frame across the crown; clamp force tuned to 3.8 N.</p>
+          <span class="rotate__callout-spec">312 g · 3.8 N clamp</span>
+        </div>
+        <span class="rotate__hint">Keep scrolling — the ARC One turns with you.</span>
+      </div>
+    </section>
+
+    <!-- 04 · EXPLODED VIEW (pinned: explode → reattach) -->
+    <section class="anatomy" id="anatomy">
+      <div class="anatomy__pin" id="anatomyPin">
+        <h2 class="anatomy__title">Every layer,<br>considered.</h2>
+        <div class="anatomy__stage" id="anatomyStage">
+          <canvas id="anatomyCanvas" width="1440" height="1440" aria-label="ARC One exploded component view" role="img"></canvas>
+          <div class="anatomy__label anatomy__label--band"><span></span>Stitched bone-leather band</div>
+          <div class="anatomy__label anatomy__label--hinge"><span></span>Forged copper hinge</div>
+          <div class="anatomy__label anatomy__label--driver"><span></span>40 mm custom driver</div>
+          <div class="anatomy__label anatomy__label--cushion"><span></span>Memory-knit cushion</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 · ANC (dark interlude) -->
+    <section class="silence" id="silence">
+      <div class="silence__pin" id="silencePin">
+        <svg class="silence__waves" id="silenceWaves" viewBox="0 0 1200 400" preserveAspectRatio="none" aria-hidden="true">
+          <path class="swave swave--1" d=""/>
+          <path class="swave swave--2" d=""/>
+          <path class="swave swave--3" d=""/>
+          <path class="swave swave--4" d=""/>
+        </svg>
+        <div class="silence__copy">
+          <h2 class="silence__title">Scroll the world<br>quiet.</h2>
+          <p class="silence__sub">Adaptive ANC listens 48,000 times a second — and answers with nothing at all.</p>
+        </div>
+        <div class="silence__meter">
+          <span class="silence__db" id="silenceDb">74</span>
+          <span class="silence__unit">dB around you</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 · POWER / BATTERY -->
+    <section class="power" id="power">
+      <div class="power__inner">
+        <div class="power__ring-wrap">
+          <svg class="power__ring" viewBox="0 0 240 240" aria-hidden="true">
+            <circle class="power__ring-track" cx="120" cy="120" r="104"/>
+            <circle class="power__ring-fill" id="powerRing" cx="120" cy="120" r="104"/>
+          </svg>
+          <div class="power__ring-num"><span id="powerCount">0</span><em>hrs</em></div>
+        </div>
+        <div class="power__copy">
+          <h2>Charge Monday.<br>Think about it Friday.</h2>
+          <p>Forty hours at full volume with ANC on. And when you're caught short — five minutes on the pad buys five more hours of sound.</p>
+          <div class="power__stats">
+            <div class="pstat"><span class="pstat__num" data-count="40">0</span><span class="pstat__label">hours playback</span></div>
+            <div class="pstat"><span class="pstat__num" data-count="5">0</span><span class="pstat__label">min quick-charge</span></div>
+            <div class="pstat"><span class="pstat__num" data-count="5">0</span><span class="pstat__label">hours gained</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07 · PERSONAL SOUND / APP -->
+    <section class="appsec" id="app">
+      <div class="appsec__inner">
+        <div class="appsec__copy">
+          <span class="appsec__eyebrow">ARC App</span>
+          <h2>Tuned to one pair<br>of ears. Yours.</h2>
+          <p>A 40-second fit scan maps how sound actually reaches your ear — then Personal Sound builds an EQ profile that travels with you across every device.</p>
+          <ul class="appsec__list">
+            <li><span>01</span>Fit scan measures leakage around each cushion</li>
+            <li><span>02</span>Adaptive EQ rebuilds the curve 200× a second</li>
+            <li><span>03</span>Profile syncs over Bluetooth LE — no account needed</li>
+          </ul>
+        </div>
+        <div class="appsec__phone-wrap">
+          <div class="appsec__phone" id="appPhone">
+            <div class="phone__screen">
+              <div class="phone__status"><span>9:41</span><span class="phone__notch"></span><span>◦◦▮</span></div>
+              <div class="phone__header">
+                <span class="phone__brand">ARC</span>
+                <span class="phone__device">ARC One · Connected</span>
+              </div>
+              <div class="phone__battery">
+                <div class="phone__battery-bar"><span id="phoneBatteryFill"></span></div>
+                <span class="phone__battery-label"><em id="phoneBatteryNum">38</em> h remaining</span>
+              </div>
+              <div class="phone__modes">
+                <button class="phone__mode is-active" type="button">ANC</button>
+                <button class="phone__mode" type="button">Transparency</button>
+                <button class="phone__mode" type="button">Off</button>
+              </div>
+              <div class="phone__eq" aria-hidden="true">
+                <div class="phone__eq-label">Personal Sound — active</div>
+                <div class="phone__eq-bars" id="eqBars">
+                  <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                </div>
+                <div class="phone__eq-freqs"><span>32</span><span>250</span><span>1k</span><span>4k</span><span>16k</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 08 · GALLERY (horizontal scroll strip) -->
+    <section class="gallery" id="gallery">
+      <div class="gallery__pin" id="galleryPin">
+        <div class="gallery__track" id="galleryTrack">
+          <figure class="gallery__item"><img src="assets/images/arc_v1.png" alt="ARC One studio shot"></figure>
+          <figure class="gallery__item gallery__item--text">
+            <blockquote>“The quietest thing<br>you'll ever hear.”</blockquote>
+          </figure>
+          <figure class="gallery__item"><img src="assets/images/arc_v2.png" alt="ARC One twin-band prototype"></figure>
+          <figure class="gallery__item"><img src="assets/images/arc_v3.png" alt="ARC One profile view"></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 08 · SPECS -->
+    <section class="specs" id="specs">
+      <h2 class="specs__title">The fine print,<br>writ large.</h2>
+      <dl class="specs__list">
+        <div class="spec"><dt>Driver</dt><dd>40 mm free-edge, copper-clad voice coil</dd></div>
+        <div class="spec"><dt>ANC</dt><dd>Adaptive hybrid, 6-mic array, 48 kHz refresh</dd></div>
+        <div class="spec"><dt>Battery</dt><dd>40 h (ANC on) · 5 min ⇒ 5 h quick charge</dd></div>
+        <div class="spec"><dt>Connectivity</dt><dd>Bluetooth 5.4 · Multipoint ×2 · USB-C lossless</dd></div>
+        <div class="spec"><dt>Materials</dt><dd>Recycled aluminum, vegan leather, memory-knit</dd></div>
+        <div class="spec"><dt>Weight</dt><dd>312 g, balanced at the crown</dd></div>
+      </dl>
+    </section>
+
+    <!-- 09 · CTA -->
+    <section class="cta" id="preorder">
+      <div class="cta__inner">
+        <img src="assets/images/arc_v1_cutout.png" alt="" class="cta__img">
+        <h2 class="cta__title">Sound, Shaped.</h2>
+        <p class="cta__price">ARC One — $549. Ships this fall.</p>
+        <a class="cta__btn" href="#">Pre-order ARC One</a>
+      </div>
+      <footer class="footer">
+        <span>ARC Audio — a concept case study</span>
+        <span>Designed & built with scroll in mind</span>
+      </footer>
+    </section>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
